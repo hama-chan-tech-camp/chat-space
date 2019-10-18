@@ -12,3 +12,7 @@
 @import "config/colors";
 @import "modules/flash";
 @import "modules/user";
+
+*{
+  box-sizing: border-box;
+}
