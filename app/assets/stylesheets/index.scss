@@ -1,8 +1,8 @@
 .chat {
    width: calc(100% - 300px);
+   float: left;
    .header {
-     box-sizing: border-box;
-     height: 100px;
+    height: 100px;
      padding: 0 40px;
      .left-header {
        float: left;
@@ -27,7 +27,6 @@
        color: $light_blue;
        float: right;
        height: 40px;
-       line-height: 40px;
        margin-top: 28px;
        padding: 0 20px;
      }
@@ -35,9 +34,9 @@
 
    .messages {
       background-color: #FAFAFA;
-      box-sizing: border-box;
       padding: 46px 40px 0;
-      height: calc(100% - 100px - 90px);
+      height: calc(100vh - 100px - 90px);
+      overflow: scroll;
       .message {
         .upper-message {
           display: flex;
@@ -65,7 +64,6 @@
   
     .form {
       background-color: #DDDDDD;
-      box-sizing: border-box;
       height: 90px;
       padding: 20px 50px 20px 40px;
       &__message {
