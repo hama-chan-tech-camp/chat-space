@@ -13,19 +13,7 @@ $(document).on("turbolinks:load", function() {
     return html;
   }
 
-  // 追加されなかった場合のユーザーのHTMLを組み立て
-  // function buildHTML(user, id) {
-  //   var html; `
-  //   <div class="chat-group-user clearfix">
-  //     <p class="chat-group-user__name">ユーザーが見つかりません</p>
-  //   </div>
-  //           `
-
-
-  //   return html;
-  // }
- 
-    // 削除
+  
     
   function buildHTML(user, id) {
     var html =
@@ -55,9 +43,7 @@ $(document).on("turbolinks:load", function() {
     var user = textField.val();
    
     // 検索フィールドが空に戻った場合はajax通信を行わない
-    // if (user == ""){
-  
-    // } else {
+    
       $.ajax({
         type: 'GET',
         url: '/users',
@@ -67,7 +53,7 @@ $(document).on("turbolinks:load", function() {
         dataType: 'json'
       })
       .done(function(data) {
-        console.log(data)
+        
 
         
         // if　ユーザーがいる時
@@ -90,18 +76,18 @@ $(document).on("turbolinks:load", function() {
     
     
     $(document).on("click", ".user-search-add", function(){
-      console.log(this)
+      
       let id = $(this).data('user-id')
-      // console.log(id)
+     
       let user = $(this).data('user-name')
-      // console.log(user)
+      
       $(this).parent().remove();
       var html = buildHTML(user, id )
       $(`#chat-group-users`).append(html);
     })
     // ユーザーを削除
 $("#chat-group-users").on("click", ".chat-group-user__btn--remove", function(){
-  console.log(this)
+  
   $(this).parent().remove();
 });
 });
