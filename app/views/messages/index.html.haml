@@ -4,19 +4,22 @@
 
   .chat
     .header
-      .left-header
-        .left-header__title
+      .left-header 
+        .main-header__left-box__current-group
+        .left-header__title 
           = @group.name
             
         %ul.left-header__members
           Member：
           %li.member
-            メンバー名
+            - @group.users.each do |user|
+              %i
+                = user.name
       .right-header
         .right-header__button
-          =link_to edit_group_path(@group) do
-            edit
-    .messages
+          =link_to edit_group_path(@group),class: "edit" do
+            Edit
+    .messages{data:{group:{id: @group.id}}}
       = render @messages
 
     
