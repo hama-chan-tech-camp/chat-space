@@ -55,10 +55,7 @@ return html;
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
    
     const last_message_id = $('.message:last').data('message-id');
-    // var groupid = $('.messages').data('group-id');
-    // var url = `groups/${groupid}/messages`
     
-    // console.log(last_message_id)
     if(window.location.href.match(/\/groups\/\d+\/messages/))
     {
        
@@ -74,8 +71,7 @@ return html;
     })
     .done(function(messages) {
       messages.forEach(function(message){
-      // console.log(message);
-    //  if (messages.length!=0){
+      
       var html = buildHTML(message);
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
@@ -84,7 +80,7 @@ return html;
     })
   
     .fail(function() {
-      // console.log('error');
+      alert('error');
     });
     }
   };
