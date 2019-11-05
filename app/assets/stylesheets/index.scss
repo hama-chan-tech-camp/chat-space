@@ -26,10 +26,14 @@
        border: 1px solid $light_blue;
        color: $light_blue;
        float: right;
+       line-height: 40px;
+       right: 40px;
        height: 40px;
-       margin-top: 28px;
+       margin-top: 30px;
        padding: 0 20px;
+       
      }
+     
    }
 
    .messages {
@@ -95,5 +99,10 @@
          margin-left: 15px;
          padding: 0 30px;
        }
+     }
+
+     .edit{
+        text-decoration: none;
+        color: #38aef0;
      }
    }
