@@ -1,8 +1,8 @@
 # Load DSL and set up stages
-require "istrano/setup"
+# require "istrano/setup"
 
-# Include default deployment tasks
-require "istrano/deploy"
+# # Include default deployment tasks
+# require "istrano/deploy"
 
 # Load the SCM plugin appropriate to your project:
 #
