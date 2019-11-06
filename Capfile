@@ -13,7 +13,6 @@
 # install_plugin istrano::SCM::Svn
 # or
 # require "istrano/scm/git"
-# install_plugin istrano::SCM::Git
 
 # Include tasks from other gems included in your Gemfile
 #
@@ -40,7 +39,8 @@ require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano3/unicorn'
-require "capistrano/deploy"
+require "capistrano/scm/git"
+install_plugin Capistrano::SCM::Git
 
 # Load custom tasks from `lib/istrano/tasks` if you have any defined
 Dir.glob("lib/istrano/tasks/*.rake").each { |r| import r }
