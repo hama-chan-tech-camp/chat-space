@@ -40,6 +40,7 @@ require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano3/unicorn'
+require "capistrano/deploy"
 
 # Load custom tasks from `lib/istrano/tasks` if you have any defined
 Dir.glob("lib/istrano/tasks/*.rake").each { |r| import r }
