@@ -12,8 +12,8 @@
 # require "istrano/scm/svn"
 # install_plugin istrano::SCM::Svn
 # or
-require "istrano/scm/git"
-install_plugin istrano::SCM::Git
+# require "istrano/scm/git"
+# install_plugin istrano::SCM::Git
 
 # Include tasks from other gems included in your Gemfile
 #
