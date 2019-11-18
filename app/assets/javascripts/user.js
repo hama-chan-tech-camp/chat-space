@@ -55,7 +55,7 @@ $(document).on("turbolinks:load", function() {
     
 
       
-      // if　ユーザーがいる時
+      // ifユーザーがいる時
       data.forEach(function(user){
         var html = buildAddUserHTML(user);
         
@@ -74,7 +74,7 @@ $(document).on("turbolinks:load", function() {
 
     
     
-  $(document).on("click", ".user-search-add", function(){
+  $('#user-search-result').on("click", ".user-search-add", function(){
     
     let id = $(this).data('user-id')
     
