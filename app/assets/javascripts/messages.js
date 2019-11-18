@@ -42,6 +42,7 @@ return html;
       var html = buildHTML(message);
       $('.messages').append(html);
       $('#message_content').val('');
+      $('#message_image').val('');
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
       $('.form__submit').prop( 'disabled', false )
     })
