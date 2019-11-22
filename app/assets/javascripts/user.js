@@ -57,6 +57,9 @@ $(document).on("turbolinks:load", function() {
       
       // ifユーザーがいる時
       data.forEach(function(user){
+
+        $('#user-search-result').empty();
+
         var html = buildAddUserHTML(user);
         
         $('#user-search-result').append(html);
